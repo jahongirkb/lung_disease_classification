@@ -4,10 +4,10 @@ import pathlib
 import platform
 import plotly.express as px
 
-# plt = platform.system()
-# if plt == 'Linux': pathlib.WindowsPath = pathlib.PosixPath
-temp = pathlib.PosixPath
-pathlib.PosixPath = pathlib.WindowsPath
+plt = platform.system()
+if plt == 'Linux': pathlib.WindowsPath = pathlib.PosixPath
+# temp = pathlib.PosixPath
+# pathlib.PosixPath = pathlib.WindowsPath
 
 
 st.title("Bu model o'pka tasvirlarini klassifikatsiya qiluvchi model")
