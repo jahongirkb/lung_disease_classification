@@ -23,7 +23,7 @@ if file:
 
     pred, pred_id, probs =  model.predict(img)
     foiz = probs[pred_id]*100
-    if foiz>50:
+    if foiz>75:
         st.success(f"Bashorat: {pred}")
         st.info(f"Ehtimollik: {probs[pred_id]*100:.1f}%")
 
