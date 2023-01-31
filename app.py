@@ -33,7 +33,7 @@ if file1:
         st.markdown("Bu rasm o'pka tasviri emas")
   
 st.title("Bu model o'pka rakini klassifikatsiya qiluvchi model")
-file2 = st.file_uploader('Rasm yuklash', type=['png', 'jpg', 'jpeg', 'gif', 'svg'])
+file2 = st.file_uploader('Image upload', type=['png', 'jpg', 'jpeg', 'gif', 'svg'])
 # if file2:
 #     st.image(file2)
 
