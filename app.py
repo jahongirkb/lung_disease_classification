@@ -34,24 +34,24 @@ if file1:
   
 st.title("Bu model o'pka rakini klassifikatsiya qiluvchi model")
 file2 = st.file_uploader('Rasm yuklash', type=['png', 'jpg', 'jpeg', 'gif', 'svg'])
-if file2:
-    st.image(file2)
+# if file2:
+#     st.image(file2)
 
-    img2 = PILImage.create(file2)
+#     img2 = PILImage.create(file2)
 
-    model2 = load_learner('cancer_classification_model.pkl')
+#     model2 = load_learner('cancer_classification_model.pkl')
 
 
-    pred, pred_id, probs =  model2.predict(img2)
-    foiz = probs[pred_id]*100
-    if foiz>75:
-        st.success(f"Bashorat: {pred}")
-        st.info(f"Ehtimollik: {probs[pred_id]*100:.1f}%")
+#     pred, pred_id, probs =  model2.predict(img2)
+#     foiz = probs[pred_id]*100
+#     if foiz>75:
+#         st.success(f"Bashorat: {pred}")
+#         st.info(f"Ehtimollik: {probs[pred_id]*100:.1f}%")
 
-        fig = px.bar(x=probs*100, y=model2.dls.vocab)
-        st.plotly_chart(fig)
-    else:
-        st.markdown("Bu rasm o'pka tasviri emas")
+#         fig = px.bar(x=probs*100, y=model2.dls.vocab)
+#         st.plotly_chart(fig)
+#     else:
+#         st.markdown("Bu rasm o'pka tasviri emas")
                     
             
 
