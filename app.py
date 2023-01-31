@@ -30,7 +30,9 @@ if file:
         fig = px.bar(x=probs*100, y=model.dls.vocab)
         st.plotly_chart(fig)
     else:
-        st.markdown("Bu rasm o'pka tasviri emas"
-                    
+        st.markdown("Bu rasm o'pka tasviri emas")
+  
 st.title("Bu model o'pka rakini klassifikatsiya qiluvchi model")
+                    
+            
 
