@@ -4,10 +4,10 @@ import pathlib
 import platform
 import plotly.express as px
 
-# plt = platform.system()
-# if plt == 'Linux': pathlib.WindowsPath = pathlib.PosixPath
-temp = pathlib.PosixPath
-pathlib.PosixPath = pathlib.WindowsPath
+plt = platform.system()
+if plt == 'Linux': pathlib.WindowsPath = pathlib.PosixPath
+# temp = pathlib.PosixPath
+# pathlib.PosixPath = pathlib.WindowsPath
 
 
 st.title("Bu model o'pka tasvirlarini klassifikatsiya qiluvchi model")
@@ -23,7 +23,7 @@ if file:
 
     pred, pred_id, probs =  model.predict(img)
     foiz = probs[pred_id]*100
-    if foiz>50:
+    if foiz>75:
         st.success(f"Bashorat: {pred}")
         st.info(f"Ehtimollik: {probs[pred_id]*100:.1f}%")
 
