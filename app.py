@@ -10,7 +10,8 @@ if plt == 'Linux': pathlib.WindowsPath = pathlib.PosixPath
 # pathlib.PosixPath = pathlib.WindowsPath
 
 
-st.title("Bu model o'pka tasvirlarini klassifikatsiya qiluvchi model")
+st.title("Bu model o'pkaning reyntgen tasvirlarini klassifikatsiya qiluvchi model")
+st.image("https://upload.wikimedia.org/wikipedia/commons/1/15/Radiology_2706_1407_empyema_progression_nevit.gif", width=330)
 
 file1 = st.file_uploader('Rasm yuklash', type=['png', 'jpg', 'jpeg', 'gif', 'svg'])
 if file1:
@@ -32,7 +33,9 @@ if file1:
     else:
         st.markdown("Bu rasm o'pka tasviri emas")
   
-st.title("Bu model o'pka rakini klassifikatsiya qiluvchi model")
+st.title("Bu model o'pka rakini aniqlovchi model")
+st.image("https://thumbs.gfycat.com/ImpoliteUnfoldedChameleon-size_restricted.gif", width=330)
+
 file2 = st.file_uploader('Image upload', type=['png', 'jpg', 'jpeg', 'gif', 'svg'])
 if file2:
     st.image(file2)
