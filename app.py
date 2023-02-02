@@ -24,7 +24,7 @@ if file1:
 
     pred, pred_id, probs =  model1.predict(img1)
     foiz = probs[pred_id]*100
-    if foiz>75:
+    if foiz>90:
         st.success(f"Bashorat: {pred}")
         st.info(f"Ehtimollik: {probs[pred_id]*100:.1f}%")
 
@@ -47,7 +47,7 @@ if file2:
 
     pred, pred_id, probs =  model2.predict(img2)
     foiz = probs[pred_id]*100
-    if foiz>75:
+    if foiz>90:
         st.success(f"Bashorat: {pred}")
         st.info(f"Ehtimollik: {probs[pred_id]*100:.1f}%")
 
